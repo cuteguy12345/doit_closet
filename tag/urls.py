@@ -3,5 +3,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.best),
+    path('<int:pk>/', views.best_detail),
+    path('main/', views.best_list),
+    
 ]
