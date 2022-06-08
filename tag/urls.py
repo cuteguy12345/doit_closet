@@ -1,9 +1,11 @@
-from xml.etree.ElementInclude import include
-from django.urls import path
+from django.urls import path, include
 from . import views
 
+best_patterns = [
+    path('<int:pk>/', views.BestDetail.as_view()),
+    path('main/', views.BestList.as_view())
+]
+
 urlpatterns = [
-    path('<int:pk>/', views.best_detail),
-    path('main/', views.best_list),
-    
+    path('best/', include(best_patterns))
 ]
