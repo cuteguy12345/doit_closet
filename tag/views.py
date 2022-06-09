@@ -5,6 +5,8 @@ from . models import Best
 class BestList(ListView):
     model = Best
     ordering = '-pk'
+    template_name = 'best/best_list.html'
 
 class BestDetail(DetailView):
     model = Best
+    template_name = 'best/best_detail.html'
