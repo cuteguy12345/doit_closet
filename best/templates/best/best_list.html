@@ -11,7 +11,7 @@
                         id="main-area">
                         {% if best_list.exists %}
                         {% for b in best_list %}
-                        <div class="col mb-5">
+                        <div class="col mb-5" id="post - {{ b.pk }}">
                             <div class="card h-100">
                                 <!-- Product image-->
                                 {% if b.head_image %}

@@ -1,6 +1,9 @@
 from django.views.generic import ListView, DetailView
 
-from . models import Best, Category
+from tag.models import Category
+
+from .models import Best
+
 
 # Create your views here.
 class BestList(ListView):
